@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Runner Deluxe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game-container">
+    <div id="ui">
+      <div class="hud-box" id="score">SCORE: 0</div>
+      <div class="hud-box" id="coins">🪙 0</div>
+    </div>
+
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+    <div id="start-screen" class="overlay">
+      <h1>CYBER DASH</h1>
+      <p>Select Your Runner:</p>
+      
+      <div class="char-select">
+        <div class="char-card selected" data-char="neon">
+          <div class="char-icon" style="background: #00f2fe;"></div>
+          <span>Neon</span>
+        </div>
+        <div class="char-card" data-char="blaze">
+          <div class="char-icon" style="background: #ff007f;"></div>
+          <span>Blaze</span>
+        </div>
+        <div class="char-card" data-char="viper">
+          <div class="char-icon" style="background: #00ff88;"></div>
+          <span>Viper</span>
+        </div>
+      </div>
+
+      <p class="controls-hint">Controls: <b>A/D</b> or <b>←/→</b> to Switch Lanes<br><b>SPACE</b> or <b>↑</b> to Jump</p>
+      <button class="btn" id="start-btn">START RUN</button>
+    </div>
+
+    <div id="game-over-screen" class="overlay hidden">
+      <h1 class="crash-title">CRASHED!</h1>
+      <p id="final-score">Score: 0</p>
+      <p id="final-coins">Coins Collected: 0</p>
+      <button class="btn" id="restart-btn">TRY AGAIN</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
